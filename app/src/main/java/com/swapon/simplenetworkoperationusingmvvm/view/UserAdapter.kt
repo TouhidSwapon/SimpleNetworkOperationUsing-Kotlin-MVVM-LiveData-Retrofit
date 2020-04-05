@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.squareup.picasso.Picasso
 import com.swapon.simplenetworkoperationusingmvvm.R
+import com.swapon.simplenetworkoperationusingmvvm.databinding.ItemLayoutUserBinding
 import com.swapon.simplenetworkoperationusingmvvm.model.pojo.User
 
 class UserAdapter(private val mContext: Context, private val mData: List<User.UserData>) : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
@@ -54,6 +55,7 @@ class UserAdapter(private val mContext: Context, private val mData: List<User.Us
         val tvLastName: TextView
         val tvEmail: TextView
         val ivProfilePhoto: ImageView
+
 
 
         init {

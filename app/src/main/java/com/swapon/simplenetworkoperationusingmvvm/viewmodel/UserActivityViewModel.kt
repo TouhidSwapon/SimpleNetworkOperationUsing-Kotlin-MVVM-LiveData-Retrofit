@@ -19,4 +19,5 @@ class UserActivityViewModel(application: Application) : AndroidViewModel(applica
         userRepository = UserRepository(application)
     }
 
+
 }

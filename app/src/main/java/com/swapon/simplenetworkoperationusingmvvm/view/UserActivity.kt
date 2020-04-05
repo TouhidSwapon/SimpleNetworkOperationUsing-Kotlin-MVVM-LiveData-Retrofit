@@ -1,5 +1,6 @@
 package com.swapon.simplenetworkoperationusingmvvm.view
 
+import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -15,6 +16,7 @@ import com.swapon.simplenetworkoperationusingmvvm.viewmodel.UserActivityViewMode
 
 class UserActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user)
@@ -22,7 +24,6 @@ class UserActivity : AppCompatActivity() {
         val userActivityViewModel = ViewModelProvider(this).get(UserActivityViewModel::class.java)
         userActivityViewModel.allUsers.observe(this, Observer { user ->
             Log.d(TAG, "user.size: " + user.data!!.size)
-
 
             val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
             recyclerView.setHasFixedSize(true)
@@ -35,7 +36,6 @@ class UserActivity : AppCompatActivity() {
     }
 
     companion object {
-
         private val TAG = "UserActivity"
     }
 }
